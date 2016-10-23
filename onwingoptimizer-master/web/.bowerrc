@@ -1,0 +1,7 @@
+{
+  "directory": "public/bower_components",
+  "proxy":"http://http-proxy.corporate.ge.com:80",
+  "https-proxy":"http://http-proxy.corporate.ge.com:80",
+  "strict-ssl": false
+
+}

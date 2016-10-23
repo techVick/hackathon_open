@@ -1,0 +1,14 @@
+---
+applications:
+  - name: onwing-maintenance-optimizer
+    buildpack: predix_openresty_buildpack
+    path: dist
+    memory: 64M
+    stack: cflinuxfs2
+    
+    services:
+            - onwing-redis-service
+     
+    env:
+      UAA_SERVER_URL: https://4fc1dd07-0fe2-4d12-92ea-73d3ed8b9bee.predix-uaa-training.run.aws-usw02-pr.ice.predix.io
+      REDIS: redis-14

@@ -1,0 +1,7 @@
+---
+applications:
+  - name: onwing-optimizer-analytics
+    buildpack: java_buildpack
+    path: target/onwing-optimizer-analytics-service-0.0.1.jar
+services:
+  - onwing-optimizer-postgres

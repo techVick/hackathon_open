@@ -1,0 +1,34 @@
+[
+	{
+		"serial":7101,
+		"part":"Base",
+		"invStatus":"Operational",
+		"topSerial":"MA",
+		"installedOn":4,
+		"cycle":2500
+		},
+	{
+		"serial":7102,
+		"part":"Base",
+		"invStatus":"Operational",
+		"topSerial":"MJ",
+		"installedOn":1,
+		"cycle":1500
+		},
+	{
+		"serial":7103,
+		"part":"Base",
+		"invStatus":"Operational",
+		"topSerial":"MM",
+		"installedOn":0,
+		"cycle":1500
+		},
+	{
+		"serial":7104,
+		"part":"Base",
+		"invStatus":"Installed",
+		"topSerial":"MG",
+		"installedOn":4,
+		"cycle":1500
+		}
+]

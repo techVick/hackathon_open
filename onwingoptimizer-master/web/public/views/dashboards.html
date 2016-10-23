@@ -1,0 +1,41 @@
+<div ng-show="islogedIn">
+        <px-card header-text="Summary" icon="fa-bar-chart">
+                <div id="div-chart-summary" style="height:250px">
+                </div>
+        </px-card>
+        <div class="flex flex--wrap u-mt">
+                <px-card style="padding:15px"> <label> Select Issue: </label><select ng-model="selectedIssue" ng-options="issue as issue.name for issue in issueList"
+                                ng-change="onIssueSelected()"></select> <label> <input type="checkbox" ng-model="isETOPS" ng-change="onEtopChange()"/> ETOPS</label></px-card>
+
+                <px-card style="padding:15px"> Selected SB Type: <span>{{selectedIssue.sbType}}</span></px-card>
+        </div>
+
+        <px-card header-text="{{selectedIssue.name}}" icon="fa-line-chart">
+                <div class="flex flex--wrap u-mt">
+                        <px-card style="border-bottom:none">
+                                <div id="div-chart-issue-detail">
+                                </div>
+                        </px-card>
+                        <px-card>
+                                <div id="div-chart-issue-pending">
+                                </div>
+                        </px-card>
+                </div>
+        </px-card>
+        <px-card ng-show="alertMessage" header-text="{{alertMessage}}" icon="fa-line-chart">
+                <div class="flex flex--wrap u-mt">
+                        <px-card header-text="Overdue Alerts" style="border-bottom:none">
+                                <div ng-repeat="alert in overDueAlerts">
+                                        <px-alert-message type="important" message="{{alert}}" action="dismiss">
+                                        </px-alert-message>
+                                </div>
+                        </px-card>
+                        <px-card header-text="Potential compliance Alerts">
+                                <div ng-repeat="alert in potcompAlerts">
+                                        <px-alert-message type="warning" message="{{alert}}" action="dismiss">
+                                        </px-alert-message>
+                                </div>
+                        </px-card>
+                </div>
+        </px-card>
+</div>
